@@ -12,3 +12,16 @@ function leaders(A) {
   }
   return count
 }
+
+function getLeaders(A) {
+  const results = []
+  let max = -Infinity
+  for (let i = A.length - 1; i >= 0; i--) {
+    let current = A[i]
+    if (current > max) {
+      max = current
+      results.push(current)
+    }
+  }
+  return results
+}

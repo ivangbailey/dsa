@@ -37,3 +37,22 @@
 // else
 // no change
 
+function unsetIthBit(A, B) {
+  let result = A
+  const set = A & (1 << B)
+  if (set) {
+    result = A ^ (1 << B)
+  }
+  return result
+}
+
+function unsetIBits(A, B) {
+  let result = A
+  for (let i = 0; i < B-1; i++) {
+    const set = result & (1 << i)
+    if (set) {
+      result = result ^ (1 << i)
+    }
+  }
+  return result
+}
