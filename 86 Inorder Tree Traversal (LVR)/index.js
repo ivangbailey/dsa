@@ -1,8 +1,9 @@
-function solve(A) {
+function solve(A, result) {
   if (A === null || A === undefined) {
     return
   }
   solve(A.left)
-  console.log(A) // run logic here
+  result.push(A.data) // run logic here
   solve(A.right)
+  return result
 }
