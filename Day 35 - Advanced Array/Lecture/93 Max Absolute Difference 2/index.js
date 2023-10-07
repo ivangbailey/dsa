@@ -16,3 +16,4 @@ function solve(A) {
   const result = Math.max((maxX - minX), (maxY - minY))
   return result
 }
+
